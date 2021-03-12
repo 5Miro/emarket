@@ -5,7 +5,9 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+		"start": "node backend/server.js",
+		"heroku-postbuild": "cd frontend && npm install && npm run build"
+
 	},
 	"author": "",
 	"license": "ISC",
