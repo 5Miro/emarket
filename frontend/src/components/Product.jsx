@@ -7,9 +7,11 @@ class Product extends Component {
 	render() {
 		return (
 			<div key={this.props.product._id} className="card">
-				<Link to={`/product/${this.props.product._id}`}>
-					<img className="medium" src={this.props.product.image} alt={this.props.product.name} />
-				</Link>
+				<div className="card-image-container">
+					<Link to={`/product/${this.props.product._id}`}>
+						<img className="medium" src={this.props.product.image} alt={this.props.product.name} />
+					</Link>
+				</div>				
 				<div className="card-body">
 					<Link to={`/product/${this.props.product._id}`}>
 						<h2>{this.props.product.name}</h2>
